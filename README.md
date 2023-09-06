@@ -42,16 +42,16 @@ This project is a ReactJS-based web application that integrates with the Notion 
 
 To run this application locally, follow these steps:
 
-###1. Clone the repository:
+1. Clone the repository:
 
-````shell
+```
 git clone <repository-url>
 
 ```
 
 2. Install dependencies for both the client and server folders:
 
-```shell
+```
 cd client
 npm install
 cd ../server
@@ -61,19 +61,19 @@ npm install
 
 3. Set up environment variables:
 
-* Create a .env file in the server folder and add your Notion API integration token.
-* Configure other environment variables as needed.
+- Create a .env file in the server folder and add your Notion API integration token.
+- Configure other environment variables as needed.
 
 4. Start the server:
 
-```shell
+```
 npm start
 
 ```
 
 5. Start the client:
 
-```shell
+```
 cd ../client
 npm start
 
@@ -91,5 +91,4 @@ npm start
 
 ## Contributors
 
-* <u>Emmanuel Jason De Lara</u>
-````
+- <u>Emmanuel Jason De Lara</u>
