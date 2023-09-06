@@ -47,6 +47,8 @@ To run this application locally, follow these steps:
 ````shell
 git clone <repository-url>
 
+```
+
 2. Install dependencies for both the client and server folders:
 
 ```shell
@@ -55,7 +57,7 @@ npm install
 cd ../server
 npm install
 
-exit
+```
 
 3. Set up environment variables:
 
@@ -67,7 +69,7 @@ exit
 ```shell
 npm start
 
-exit
+```
 
 5. Start the client:
 
@@ -75,7 +77,7 @@ exit
 cd ../client
 npm start
 
-exit
+```
 
 6. Access the application in your browser at http://localhost:3000.
 
