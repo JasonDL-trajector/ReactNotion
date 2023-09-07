@@ -38,7 +38,7 @@ This project is a ReactJS-based web application that integrates with the Notion 
 
 To run this application locally, follow these steps:
 
-### IMPORTANT
+### IMPORTANT!!!
 
 **Follow the instructions on this YouTube video on how to create a Notion account and how to setup the integration and database:**
 
