@@ -15,23 +15,17 @@ This project is a ReactJS-based web application that integrates with the Notion 
 
 ### Client Folder
 
-- **express-rate-limit:** 6.11.0
 - **react:** 18.2.0
-- **react-dom:** 18.2.0
 - **react-google-recaptcha:** 3.1.0
 - **react-player:** 2.12.0
-- **react-scripts:** 5.0.1
 - **react-toastify:** 8.2.0
-- **web-vitals:** 2.1.4
 
 ### Server Folder
 
 - **@notionhq/client:** 2.2.12
-- **body-parser:** 1.20.2
 - **cors:** 2.8.5
 - **dotenv:** 16.3.1
 - **express:** 4.18.2
-- **express-rate-limit:** 6.11.0
 - **nodemon:** 3.0.1
 
 ## Getting Started
@@ -48,7 +42,6 @@ To run this application locally, follow these steps:
 
 ```
 git clone <repository-url>
-
 ```
 
 2. Install dependencies for both the client and server folders:
@@ -77,7 +70,6 @@ npm start
 5. Start the client:
 
 ```
-
 cd ../client
 npm start
 
