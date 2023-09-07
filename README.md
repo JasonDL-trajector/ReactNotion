@@ -87,11 +87,11 @@ npm start
 
 ## Usage
 
-- **1. Design and customize your forms using the client application.**
-- **2. Connect the client to a Notion database by providing the integration token and database information.**
-- **3. Implement Google reCAPTCHA for form security.**
-- **4. Start receiving and managing form submissions in your Notion database.**
-- **5. Enjoy toast notifications for user feedback.**
+- **Design and customize your forms using the client application.**
+- **Connect the client to a Notion database by providing the integration token and database information.**
+- **Implement Google reCAPTCHA for form security.**
+- **Start receiving and managing form submissions in your Notion database.**
+- **Enjoy toast notifications for user feedback.**
 
 ## Contributors
 
