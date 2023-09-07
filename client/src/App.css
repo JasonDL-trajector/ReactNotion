@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Oranienbaum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Oranienbaum&family=Outfit:wght@100;300;400;500;600;700&display=swap'); 
+
+/* html {
+  max-width: 1440px;
+  max-height: 56px;
+} */
+/* * {
+  user-select: none;
+} */
+body {
+  cursor: none;
+  user-select: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  height: 80%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  background-color: #342F2D;
+  flex-shrink: 0;
+  z-index: -1;
+}
+
+.App {
+  margin-bottom: -3rem;
+}
+
+.contact {
+  margin-top: 1.5rem;
+  margin-bottom: -8rem;
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+  width: 9.875rem;
+  height: 3.25rem;
+  flex-shrink: 0;
+  border-radius: 6.25rem;
+  border: 1px solid #FAFAFA;
+  background: rgba(225, 214, 214, 0.00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact p {
+  width: 9.8125rem;
+  height: 2.625rem;
+  flex-shrink: 0;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact:hover {
+  transform: scale(1.07);
+  transition: .5s ease-in-out;
+}
+
+.title {
+  margin-top: -3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.title h1 {
+  color: rgba(228, 222, 215, 1);
+  font-family: Oranienbaum;
+  font-size: 9.375rem;
+  font-weight: 400;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -3rem;
+}
+
+.form {
+  width: 49.3125rem;
+  height: 20.3125rem;
+  flex-shrink: 0;
+  background: rgba(228, 222, 215, 1.0);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 3rem;
+  border: 2px solid black;
+  gap: 1rem;
+}
+
+/* .form:hover {
+  transform: scale(1.02);
+  transition: transform 1s ease;
+} */
+
+.form-up {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.form-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1rem;
+}
+
+.lblfirstName {
+  width: 11rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Outfit;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+input {
+  padding-left: .3rem;
+  
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
+
+textarea::placeholder {
+  font-size: 1rem;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea:focus::placeholder {
+  opacity: 0;
+}
+
+input#firstName {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  height: 1.5rem;
+  flex-shrink: 0;
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border-bottom: 1px solid black;
+}
+.lblemail {
+  width: 11rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Outfit;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+input#email {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  height: 1.5rem;
+  flex-shrink: 0;
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border-bottom: 1px solid black;
+}
+.lblcomments {
+  width: 100%;
+  height: 1.5rem;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+textarea#comment {
+  width: 100%;
+  height: 10%;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  background: transparent;
+  border: 0;
+  flex-shrink: 0;
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border-bottom: 1px solid black;
+  resize: none;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.form-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1rem;
+}
+
+.lbllastName {
+  width: 100%;
+  height: 1.5rem;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Outfit;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+input#lastName {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  height: 1.5rem;
+  flex-shrink: 0;
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border-bottom: 1px solid black;
+}
+
+.lblprojectType {
+  width: 100%;
+  height: 1.5rem;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Outfit;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+select#projectType {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  height: 1.7rem;
+  flex-shrink: 0;
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border-bottom: 1px solid black;
+}
+
+select option {
+  font-size: 1rem;
+}
+
+select#projectType:focus {
+  outline: none;
+}
+
+.default {
+  opacity: .8;
+}
+
+.submit-btn {
+  width: 10.25rem;
+  height: 4.4375rem;
+  flex-shrink: 0;
+  cursor: none;
+  user-select: none;
+  border-radius: 6.25rem;
+  border: 1px solid #000;
+  background: #EEE9E4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 41.7rem;
+  right: 26rem;
+  z-index: 1;
+}
+
+.submit-btn:hover {
+  cursor: none;
+  user-select: none;
+  transform: scale(1.05);
+  transition: .5s ease-in-out;
+}
+
+.submit-btn button {
+  cursor: none;
+  user-select: none;
+  display: flex;
+  width: 9.125rem;
+  height: 3.0625rem;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
+  background: transparent;
+  border: 0px;
+}
+
+.submit-btn button p {
+  
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
+.privacy {
+  width: 11.4375rem;
+  height: 2.625rem;
+  margin-top: 3rem;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.80);
+  font-family: Inter;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.line {
+  letter-spacing: -1rem;
+  margin-right: 1rem;
+  margin-left: 3rem;
+  font-weight: 300;
+}
+
+.backtotop {
+  width: 22.4375rem;
+  height: 2.625rem;
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.80);
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: -18rem;
+  position: absolute;
+  right: -7rem;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.star {
+  width: 5.9375rem;
+  height: 5.8125rem;
+  position: absolute;
+  left: 10.7rem;
+  top: 20rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; 
+  animation: rotate 3s linear infinite;
+}
+
+.star {
+  
+  color: rgba(228, 222, 215, 0.90);
+  text-align: center;
+  font-family: Oranienbaum;
+  font-size: 11.25rem;
+  font-weight: 400;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+    z-index: -1;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0%) scale(.70);
+    z-index: -1;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(50%) scale(.70);
+    z-index: -1;
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateY(25%) scale(.70);
+    z-index: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(.70);
+    z-index: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: -1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%) ;
+    z-index: -1;
+  }
+}
+
+.rc-anchor {
+  position: relative !important;
+  width: fit-content;
+  top: 11% !important;
+  left: 32% !important;
+  /* z-index: -1; */
+  background: #EEE9E4;
+  padding: 1.0rem;
+  transform: scale(.70);
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+.rc-anchor::before {
+  transform: scale(.5);
+  /* z-index: -1; */
+}
+
+.rc-anchor.appear {
+  animation-name: slideIn;
+  z-index: 1;
+}
+
+.rc-anchor.hidden {
+  animation-name: slideOut;
+  z-index: -1;
+}
+
+
+
+
+
+/*====================================================================================================
+                                    RESPONSIVE DESIGN
+====================================================================================================*/
+
+/* Styles for 1440p and larger screens */
+@media screen and (min-width: 2560px) {
+  /* Update body styles for larger screens if needed */
+}
+
+/* Styles for 1080p and larger screens */
+@media screen and (min-width: 1920px) {
+  /* Add styles for 1080p screens here */
+}
+
+/* Styles for large desktop screens */
+@media screen and (min-width: 1440px) {
+  /* Add styles for 1440p screens here */
+}
+
+/* Styles for desktop screens */
+@media screen and (min-width: 1024px) {
+  /* Add styles for desktop screens here */
+}
+
+/* Styles for tablet screens */
+@media screen and (min-width: 768px) {
+  /* Add styles for tablet screens here */
+  .form-container {
+    flex-direction: row;
+  }
+
+  .form {
+    width: 50%;
+  }
+
+  .form-up {
+    flex-direction: row;
+  }
+
+  .form-left, .form-right {
+    width: 50%;
+  }
+}
+
+/* Styles for mobile screens */
+@media screen and (max-width: 767px) {
+  /* Add styles for mobile screens here */
+  .contact {
+    margin-top: 0.5rem;
+    margin-bottom: -4rem;
+    top: 0.5rem;
+    right: 2rem;
+  }
+
+  .form-container {
+    flex-direction: column;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form-up {
+    flex-direction: column;
+  }
+
+  .form-left, .form-right {
+    width: 100%;
+  }
+  
+  /* Adjust other styles for smaller screens as needed */
+}
