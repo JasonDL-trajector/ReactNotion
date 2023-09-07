@@ -44,14 +44,15 @@ To run this application locally, follow these steps:
 
 1. Clone the repository:
 
-```
+````node
 git clone <repository-url>
 
-```
+```node
 
 2. Install dependencies for both the client and server folders:
 
-```
+````
+
 cd client
 npm install
 cd ../server
@@ -67,6 +68,7 @@ npm install
 4. Start the server:
 
 ```
+
 npm start
 
 ```
@@ -74,6 +76,7 @@ npm start
 5. Start the client:
 
 ```
+
 cd ../client
 npm start
 
@@ -92,3 +95,4 @@ npm start
 ## Contributors
 
 - <u>Emmanuel Jason De Lara</u>
+```
