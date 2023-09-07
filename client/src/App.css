@@ -28,12 +28,12 @@ body {
 }
 
 .contact {
-  margin-top: 1.5rem;
-  margin-bottom: -8rem;
+  /* margin-top: 1.5rem;
+  margin-bottom: -8rem; */
   position: absolute;
-  top: 1rem;
-  right: 4rem;
-  width: 9.875rem;
+  top: 5%;
+  right: 5%;
+  width: 12%;
   height: 3.25rem;
   flex-shrink: 0;
   border-radius: 6.25rem;
@@ -45,8 +45,6 @@ body {
 }
 
 .contact p {
-  width: 9.8125rem;
-  height: 2.625rem;
   flex-shrink: 0;
   color: #FFF;
   font-family: Inter;
@@ -65,16 +63,16 @@ body {
 }
 
 .title {
-  margin-top: -3rem;
+  margin-top: -3%;
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 2%;
 }
 
 .title h1 {
   color: rgba(228, 222, 215, 1);
   font-family: Oranienbaum;
-  font-size: 9.375rem;
+  font-size: 9vw;
   font-weight: 400;
 }
 
@@ -298,8 +296,8 @@ select#projectType:focus {
 }
 
 .submit-btn {
-  width: 10.25rem;
-  height: 4.4375rem;
+  width: 20.25%;
+  height: 25%;
   flex-shrink: 0;
   cursor: none;
   user-select: none;
@@ -309,9 +307,9 @@ select#projectType:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 41.7rem;
-  right: 26rem;
+  position: relative;
+  top: 8%;
+  right: -75%;
   z-index: 1;
 }
 
@@ -352,13 +350,11 @@ select#projectType:focus {
   width: 11.4375rem;
   height: 2.625rem;
   margin-top: 3rem;
-  flex-shrink: 0;
   color: rgba(255, 255, 255, 0.80);
   font-family: Inter;
   font-size: 1.1rem;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
+ 
 }
 
 .line {
@@ -369,8 +365,8 @@ select#projectType:focus {
 }
 
 .backtotop {
-  width: 22.4375rem;
-  height: 2.625rem;
+  width: 22%;
+  height: 2%;
   transform: rotate(-90deg);
   flex-shrink: 0;
   color: rgba(255, 255, 255, 0.80);
@@ -379,9 +375,9 @@ select#projectType:focus {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-top: -18rem;
+  margin-top: -18%;
   position: absolute;
-  right: -7rem;
+  right: -6%;
 }
 
 @keyframes rotate {
@@ -464,23 +460,21 @@ select#projectType:focus {
 }
 
 .rc-anchor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative !important;
-  width: fit-content;
-  top: 11% !important;
-  left: 32% !important;
-  /* z-index: -1; */
+  width: 38.5% !important;
+  top: 30% !important;
+  left: 35% !important;
   background: #EEE9E4;
-  padding: 1.0rem;
+  padding: 1rem;
+  margin-bottom: -13.5%;
   transform: scale(.70);
   animation-duration: .7s;
   animation-timing-function: ease-in-out;
   border: 1px solid black;
   border-radius: 30px;
-}
-
-.rc-anchor::before {
-  transform: scale(.5);
-  /* z-index: -1; */
 }
 
 .rc-anchor.appear {
@@ -501,71 +495,196 @@ select#projectType:focus {
                                     RESPONSIVE DESIGN
 ====================================================================================================*/
 
-/* Styles for 1440p and larger screens */
-@media screen and (min-width: 2560px) {
-  /* Update body styles for larger screens if needed */
-}
+/* Original CSS code before responsive changes */
 
-/* Styles for 1080p and larger screens */
-@media screen and (min-width: 1920px) {
-  /* Add styles for 1080p screens here */
-}
+/* Add media queries for smaller screens */
+@media screen and (max-width: 1024px) {
+  body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
-/* Styles for large desktop screens */
-@media screen and (min-width: 1440px) {
-  /* Add styles for 1440p screens here */
-}
+  .contact p {
+    font-size: .9rem;
+  }
 
-/* Styles for desktop screens */
-@media screen and (min-width: 1024px) {
-  /* Add styles for desktop screens here */
-}
+  .rc-anchor {
+    margin-bottom: -14%;
+  }
 
-/* Styles for tablet screens */
-@media screen and (min-width: 768px) {
-  /* Add styles for tablet screens here */
+  .privacy {
+    margin-top: 6rem;
+    margin-left: 1rem;
+    font-size: .9rem;
+  }
+
+  .submit-btn {
+    transform: scale(.9);
+  }
+
+  .backtotop {
+    display: none;
+  }
+
   .form-container {
-    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Stack form elements vertically on smaller screens */
   }
 
   .form {
-    width: 50%;
+    width: 80%; /* Make the form full width on smaller screens */
+    max-width: 100%;
+    flex-direction: column;
   }
 
-  .form-up {
-    flex-direction: row;
+  /* .form-up {
+    flex-direction: column;
+  } */
+
+  .title h1 {
+    font-size: 5rem; /* Reduce title font size for smaller screens */
   }
 
-  .form-left, .form-right {
-    width: 50%;
-  }
+  /* Add more responsive styles as needed */
 }
 
-/* Styles for mobile screens */
-@media screen and (max-width: 767px) {
-  /* Add styles for mobile screens here */
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+  }
+
+ .rc-anchor.appear {
+    width: 20rem !important;
+    position: relative;
+    margin-bottom: -7rem;
+    margin-left: -7rem;
+  }
+
+  /* .submit-btn {
+    top: rem;
+  } */
+
   .contact {
-    margin-top: 0.5rem;
-    margin-bottom: -4rem;
-    top: 0.5rem;
-    right: 2rem;
+    margin-top: -1rem;
+    width: 12%;
+    height: 6%;
+  }
+
+  .contact p {
+    font-size: .8rem;
+  }
+
+  .submit-btn {
+    width: 9rem;
+    height: 4rem;
+    margin-top: .5rem;
   }
 
   .form-container {
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Stack form elements vertically on smaller screens */
   }
 
   .form {
-    width: 100%;
+    width: 80%; /* Make the form full width on smaller screens */
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .title h1 {
+    font-size: 5rem; /* Reduce title font size for smaller screens */
+  }
+
+  /* Add more responsive styles as needed */
+}
+
+/* Add media queries for even smaller screens like mobile phones */
+@media screen and (max-width: 480px) {
+  body {
+    overflow: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .contact {
+    width: 18%;
+    height: 4.5%;
+    right: 1rem;
+  }
+
+  .contact p {
+    font-size: .65rem;
+  }
+  .privacy {
+    font-size: .7rem;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .title h1 {
+    font-size: 3.8rem;
+  }
+
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    /* left: 1rem; */
+  }
+  .form {
+    height: 30rem;
+    padding: 2rem; 
   }
 
   .form-up {
+    display: flex;
     flex-direction: column;
+    gap: 1rem;
   }
 
   .form-left, .form-right {
     width: 100%;
   }
+
+  .form-left label, .form-right label {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .form-down label {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .rc-anchor.appear {
+    margin-bottom: -6rem;
+    margin-left: -8rem;
+    top: -8% !important;
+  }
+
+  .spotlight-container {
+    margin: 0rem;
+  }
+
+  .submit-btn {
+    bottom: 50%; /* Move submit button to the bottom of the form on mobile */
+    left: 25%; /* Center horizontally */
   
-  /* Adjust other styles for smaller screens as needed */
+  }
+
+  /* Add more responsive styles as needed */
 }

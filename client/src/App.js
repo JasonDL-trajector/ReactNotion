@@ -118,19 +118,6 @@ function App() {
           comment: comment
         })
       }, successfulSubmit());
-
-      // if (response.status === 200) {
-      //   toast.success("Successful submission.", {
-      //     onClose: () => {
-      //       setFirstName("");
-      //       setLastName("");
-      //       setEmail("");
-      //       setProjectType("");
-      //       setComment("");
-      //       setIsCaptchaValid(false);
-      //     },
-      //   });
-      // }
       
       if (response.status === 429) {
         toast.error("API rate limit exceeded. Please try again later.");
@@ -227,14 +214,19 @@ function App() {
                       required
                     />
               
+              
+
               {isFormComplete() && (
                   <div className={`rc-anchor ${isFormComplete() ? 'appear' : 'hidden'}`}>
                   <ReCAPTCHA
                     sitekey="6LdQZP8nAAAAAEKRJt6hCbEgK2Ht2k3ETz84l5ZX"
                     onChange={handleCaptchaChange}
+                    
                   />
                 </div>
               )}
+
+              
 
             </div>
            <div className='submit-btn'>
