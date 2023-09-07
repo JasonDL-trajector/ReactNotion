@@ -7,8 +7,8 @@ This project is a ReactJS-based web application that integrates with the Notion 
 
 - Create and customize forms using a user-friendly interface.
 - Connect to a Notion database to store form submissions.
+- Have a configured form validation.
 - Implement Google reCAPTCHA for form security.
-- Play videos using React Player.
 - Display toast notifications for user feedback.
 
 ## Dependencies
