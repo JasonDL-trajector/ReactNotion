@@ -38,13 +38,13 @@ To run this application locally, follow these steps:
 
 <u>https://www.youtube.com/watch?v=WbekTHVISh0</u>
 
-1. Clone the repository:
+**1. Clone the repository:**
 
 ```
 git clone <repository-url>
 ```
 
-2. Install dependencies for both the client and server folders. Split the terminal to have them both running:
+**2. Install dependencies for both the client and server folders. Split the terminal to have them both running:**
 
 - **Client**
 
@@ -62,12 +62,12 @@ npm install
 
 ```
 
-3. Set up environment variables:
+**3. Set up environment variables:**
 
 - Create a .env file in the server folder and add your Notion API integration token.
 - Configure other environment variables as needed.
 
-4. Start the server:
+**4. Start the server:**
 
 ```
 cd ../server
@@ -75,7 +75,7 @@ npm start
 
 ```
 
-5. Start the client:
+**5. Start the client:**
 
 ```
 cd ../client
@@ -83,15 +83,15 @@ npm start
 
 ```
 
-6. Access the application in your browser at http://localhost:3000.
+**6. Access the application in your browser at http://localhost:3000.**
 
 ## Usage
 
-1. Design and customize your forms using the client application.
-2. Connect the client to a Notion database by providing the integration token and database information.
-3. Implement Google reCAPTCHA for form security.
-4. Start receiving and managing form submissions in your Notion database.
-5. Enjoy toast notifications for user feedback.
+**1. Design and customize your forms using the client application.**
+**2. Connect the client to a Notion database by providing the integration token and database information.**
+**3. Implement Google reCAPTCHA for form security.**
+**4. Start receiving and managing form submissions in your Notion database.**
+**5. Enjoy toast notifications for user feedback.**
 
 ## Contributors
 
