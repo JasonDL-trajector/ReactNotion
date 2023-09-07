@@ -51,8 +51,7 @@ git clone <repository-url>
 
 2. Install dependencies for both the client and server folders:
 
-````
-
+```
 cd client
 npm install
 cd ../server
@@ -68,7 +67,7 @@ npm install
 4. Start the server:
 
 ```
-
+cd ../server
 npm start
 
 ```
@@ -95,5 +94,7 @@ npm start
 ## Contributors
 
 - <u>Emmanuel Jason De Lara</u>
+
 ```
-````
+
+```
