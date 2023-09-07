@@ -15,10 +15,6 @@ This project is a ReactJS-based web application that integrates with the Notion 
 
 ### Client Folder
 
-- **@babel/plugin-proposal-private-property-in-object:** 7.21.11
-- **@testing-library/jest-dom:** 5.17.0
-- **@testing-library/react:** 13.4.0
-- **@testing-library/user-event:** 13.5.0
 - **express-rate-limit:** 6.11.0
 - **react:** 18.2.0
 - **react-dom:** 18.2.0
@@ -94,7 +90,3 @@ npm start
 ## Contributors
 
 - <u>Emmanuel Jason De Lara</u>
-
-```
-
-```
