@@ -44,7 +44,7 @@ To run this application locally, follow these steps:
 git clone <repository-url>
 ```
 
-2. Install dependencies for both the client and server folders:
+2. Install dependencies for both the client and server folders. Split the terminal to have them both running:
 
 - **Client**
 
@@ -57,7 +57,7 @@ npm install
 - **Server**
 
 ```
-cd ../server
+cd server
 npm install
 
 ```
