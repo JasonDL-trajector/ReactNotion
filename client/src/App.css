@@ -2,13 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Oranienbaum&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Oranienbaum&family=Outfit:wght@100;300;400;500;600;700&display=swap'); 
 
-/* html {
-  max-width: 1440px;
-  max-height: 56px;
-} */
-/* * {
-  user-select: none;
-} */
 body {
   cursor: none;
   user-select: none;
@@ -28,8 +21,6 @@ body {
 }
 
 .contact {
-  /* margin-top: 1.5rem;
-  margin-bottom: -8rem; */
   position: absolute;
   top: 5%;
   right: 5%;
@@ -95,11 +86,6 @@ body {
   border: 2px solid black;
   gap: 1rem;
 }
-
-/* .form:hover {
-  transform: scale(1.02);
-  transition: transform 1s ease;
-} */
 
 .form-up {
   display: flex;
@@ -168,6 +154,7 @@ input#firstName {
   line-height: normal;
   border-bottom: 1px solid black;
 }
+
 .lblemail {
   width: 11rem;
   height: 1.5rem;
@@ -193,6 +180,7 @@ input#email {
   line-height: normal;
   border-bottom: 1px solid black;
 }
+
 .lblcomments {
   width: 100%;
   height: 1.5rem;
@@ -403,7 +391,6 @@ select#projectType:focus {
 }
 
 .star {
-  
   color: rgba(228, 222, 215, 0.90);
   text-align: center;
   font-family: Oranienbaum;
@@ -488,16 +475,10 @@ select#projectType:focus {
 }
 
 
-
-
-
 /*====================================================================================================
                                     RESPONSIVE DESIGN
 ====================================================================================================*/
 
-/* Original CSS code before responsive changes */
-
-/* Add media queries for smaller screens */
 @media screen and (max-width: 1024px) {
   body {
     padding-left: 2rem;
@@ -530,24 +511,19 @@ select#projectType:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Stack form elements vertically on smaller screens */
   }
 
   .form {
-    width: 80%; /* Make the form full width on smaller screens */
+    width: 80%; 
     max-width: 100%;
     flex-direction: column;
   }
 
-  /* .form-up {
-    flex-direction: column;
-  } */
-
   .title h1 {
-    font-size: 5rem; /* Reduce title font size for smaller screens */
+    font-size: 5rem;
   }
 
-  /* Add more responsive styles as needed */
+
 }
 
 
@@ -564,10 +540,6 @@ select#projectType:focus {
     margin-bottom: -7rem;
     margin-left: -7rem;
   }
-
-  /* .submit-btn {
-    top: rem;
-  } */
 
   .contact {
     margin-top: -1rem;
@@ -589,23 +561,21 @@ select#projectType:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Stack form elements vertically on smaller screens */
   }
 
   .form {
-    width: 80%; /* Make the form full width on smaller screens */
+    width: 80%; 
     max-width: 100%;
     flex-direction: column;
   }
 
   .title h1 {
-    font-size: 5rem; /* Reduce title font size for smaller screens */
+    font-size: 5rem; 
   }
 
-  /* Add more responsive styles as needed */
 }
 
-/* Add media queries for even smaller screens like mobile phones */
+
 @media screen and (max-width: 480px) {
   body {
     overflow: auto;
@@ -622,6 +592,7 @@ select#projectType:focus {
   .contact p {
     font-size: .65rem;
   }
+
   .privacy {
     font-size: .7rem;
   }
@@ -637,14 +608,13 @@ select#projectType:focus {
   .title h1 {
     font-size: 3.8rem;
   }
-
   
   .form-container {
     display: flex;
     justify-content: center;
     align-self: center;
-    /* left: 1rem; */
   }
+
   .form {
     height: 30rem;
     padding: 2rem; 
@@ -681,10 +651,7 @@ select#projectType:focus {
   }
 
   .submit-btn {
-    bottom: 50%; /* Move submit button to the bottom of the form on mobile */
-    left: 25%; /* Center horizontally */
-  
+    bottom: 50%; 
+    left: 25%; 
   }
-
-  /* Add more responsive styles as needed */
 }

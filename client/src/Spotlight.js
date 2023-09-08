@@ -1,4 +1,3 @@
-// src/Spotlight.js
 import React, { useState, useEffect } from 'react';
 import './Spotlight.css';
 

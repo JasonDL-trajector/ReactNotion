@@ -4,10 +4,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from 'react-toastify';
 import ReCAPTCHA from "react-google-recaptcha";
 import Spotlight from './Spotlight.js';
-import BGMusic from './BGMusic';
+import RecaptchaVerifier from './RecaptchaVerifier';
+
 
 const rateLimiter = {
-  isEnabled: false, 
+  isEnabled: false,
   limit: 5,
   counter: 0, 
 };
@@ -68,7 +69,6 @@ function App() {
   async function submitFormToNotion() {
 
     if (rateLimiter.isEnabled) {
-      // If the rate limit is triggered, show an error message
       toast.error("Rate limit exceeded. Please try again later.");
       return;
     }
@@ -93,17 +93,14 @@ function App() {
 
       rateLimiter.counter++;
 
-      // Check if the counter exceeds the limit
       if (rateLimiter.counter > rateLimiter.limit) {
         rateLimiter.isEnabled = true;
-        // Modify the button's style when rate limit is exceeded
         const submitButton = document.getElementById("submit-button");
         if (submitButton) {
           submitButton.style.opacity = "0.5";
           submitButton.style.textDecoration = "line-through";
         }
       }
-
 
       const response = await fetch("http://localhost:4000/submitFormToNotion", {
         method: "POST",
@@ -132,19 +129,18 @@ function App() {
   return (
     <div className="App">
        <div className="spotlight-container">
-            <Spotlight />
-          </div>
-        <BGMusic />
+          <Spotlight />
+        </div>
+    
       <div className='container'>
-
         <div className='contact'>
           <p>Contact Us</p>
         </div>
 
         <div className='title'> 
          
-          <h1>REACT</h1>
-          <h1>FORMS</h1>
+          <h1>FormEase</h1>
+          
         </div>
 
         <div className="star">
@@ -213,11 +209,13 @@ function App() {
                       placeholder='Type your message here'
                       required
                     />
-              
-              
 
+
+            
               {isFormComplete() && (
                   <div className={`rc-anchor ${isFormComplete() ? 'appear' : 'hidden'}`}>
+                  
+                  
                   <ReCAPTCHA
                     sitekey="6LdQZP8nAAAAAEKRJt6hCbEgK2Ht2k3ETz84l5ZX"
                     onChange={handleCaptchaChange}
@@ -226,12 +224,10 @@ function App() {
                 </div>
               )}
 
-              
-
             </div>
            <div className='submit-btn'>
         <button
-          id="submit-button" // Add an ID to the button for styling
+          id="submit-button"
           onClick={submitFormToNotion} 
         >
           <p>Submit</p> 
@@ -242,7 +238,6 @@ function App() {
         </div>
         
         <p className='privacy'>Privacy Policy</p>
-        {/* <p className='line'>line</p> */}
         <p className='backtotop'> <span className='line'>-------------</span> BACK TO TOP</p>
 
       </div>
