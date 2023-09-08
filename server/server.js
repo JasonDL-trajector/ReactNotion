@@ -1,7 +1,7 @@
 const express = require('express');
 const { Client } = require('@notionhq/client');
 const cors = require('cors');
-const axios = require('axios');
+const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
 var bodyParser = require('body-parser');
@@ -14,32 +14,20 @@ const PORT = process.env.PORT;
 const HOST = process.env.HOST;
 const NOTION_SECRET = process.env.NOTION_SECRET;
 const DATABASE_ID = process.env.DATABASE_ID;
-const RECAPTCHA_SITEKEY = process.env.RECAPTCHA_SITEKEY;
 
-app.post('/verify-recaptcha', async (req, res) => {
-    const { token } = req.body;
-  
-    try {
-      const response = await axios.post('https://www.google.com/recaptcha/api/siteverify', null, {
-        params: {
-          secret: RECAPTCHA_SECRET_KEY,
-          response: token,
-        },
-      });
-  
-      if (response.data.success) {
-        res.json({ success: true });
-      } else {
-        res.json({ success: false, errorCodes: response.data['error-codes'] });
-      }
-    } catch (error) {
-      res.status(500).json({ success: false, error: 'Internal server error' });
-    }
+const limiter = rateLimit({
+    windowMs: 5 * 60 *1000,
+    max: 10,
+    message: 'Too many requests from this IP, please try again later.',
   });
+
+app.use('/submitFormToNotion', limiter);
+  
 
 const notion = new Client({ auth: NOTION_SECRET });
 
 app.post('/submitFormToNotion', jsonParser, async (req, res) => {
+    
     const name = req.body.name;
     const email = req.body.email;
     const comment = req.body.comment;
@@ -127,10 +115,15 @@ app.post('/submitFormToNotion', jsonParser, async (req, res) => {
             }
         })
 
-        console.log(response);
+        
+        
         console.log("SUCCESS");
+        res.status(200).json({ success: true, message: 'Form submitted successfully' });
+       
+
     } catch (error) {
         console.log(error);
+        res.status(500).json({ success: false, error: 'Internal server error' });
     }
 })
 

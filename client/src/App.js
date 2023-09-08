@@ -4,14 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from 'react-toastify';
 import ReCAPTCHA from "react-google-recaptcha";
 import Spotlight from './Spotlight.js';
-import RecaptchaVerifier from './RecaptchaVerifier';
-
-
-const rateLimiter = {
-  isEnabled: false,
-  limit: 5,
-  counter: 0, 
-};
 
 function App() {
   const [firstName, setFirstName] = useState("");
@@ -23,7 +15,7 @@ function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const successfulSubmit = () => {
-    toast.success("Successful submission.", {
+    toast.success("Form submitted successfully.", {
       onClose: () => {
         setFirstName("");
         setLastName("");
@@ -68,11 +60,6 @@ function App() {
 
   async function submitFormToNotion() {
 
-    if (rateLimiter.isEnabled) {
-      toast.error("Rate limit exceeded. Please try again later.");
-      return;
-    }
-
     if (!firstName.trim() || !lastName.trim() || !email.trim() || 
         !projectType.trim() || !comment.trim()) {
       toast.error("All fields are required");
@@ -91,17 +78,6 @@ function App() {
   
     try {
 
-      rateLimiter.counter++;
-
-      if (rateLimiter.counter > rateLimiter.limit) {
-        rateLimiter.isEnabled = true;
-        const submitButton = document.getElementById("submit-button");
-        if (submitButton) {
-          submitButton.style.opacity = "0.5";
-          submitButton.style.textDecoration = "line-through";
-        }
-      }
-
       const response = await fetch("http://localhost:4000/submitFormToNotion", {
         method: "POST",
         headers: {
@@ -113,14 +89,17 @@ function App() {
           email: email,
           projectType: projectType,
           comment: comment
-        })
-      }, successfulSubmit());
-      
-      if (response.status === 429) {
-        toast.error("API rate limit exceeded. Please try again later.");
-      }
-    } catch (error) {
+        }),
+      });
      
+      if (response.status === 200) {
+        successfulSubmit();
+      } else if (response.status === 429) {
+        toast.error("API rate limit exceeded. Please try again after a few minutes.");
+      }
+
+    } catch (error) {
+      
       console.error('Error:', error);
       toast.error("An error occurred while submitting the form.");
     }
@@ -210,29 +189,24 @@ function App() {
                       required
                     />
 
-
-            
               {isFormComplete() && (
                   <div className={`rc-anchor ${isFormComplete() ? 'appear' : 'hidden'}`}>
-                  
-                  
                   <ReCAPTCHA
                     sitekey="6LdQZP8nAAAAAEKRJt6hCbEgK2Ht2k3ETz84l5ZX"
                     onChange={handleCaptchaChange}
-                    
                   />
                 </div>
               )}
 
             </div>
            <div className='submit-btn'>
-        <button
-          id="submit-button"
-          onClick={submitFormToNotion} 
-        >
-          <p>Submit</p> 
-        </button>
-      </div>
+              <button
+                id="submit-button"
+                onClick={submitFormToNotion} 
+              >
+                <p>Submit</p> 
+              </button>
+           </div>
            
           </div>
         </div>

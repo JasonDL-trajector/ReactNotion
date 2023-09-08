@@ -11,7 +11,10 @@ body {
   height: 80%;
   padding-left: 5rem;
   padding-right: 5rem;
-  background-color: #342F2D;
+  background: url('./assets//1.jpg');
+  /* background-position: center; */
+  background-size: cover;
+  background-repeat: no-repeat;
   flex-shrink: 0;
   z-index: -1;
 }
