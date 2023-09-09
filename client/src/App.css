@@ -2,25 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Oranienbaum&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Oranienbaum&family=Outfit:wght@100;300;400;500;600;700&display=swap'); 
 
+
+html {
+  background: url('./assets//1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #160900;
+}
 body {
   cursor: none;
   user-select: none;
   box-sizing: border-box;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 80%;
+  height: 100%;
   padding-left: 5rem;
   padding-right: 5rem;
-  background: url('./assets//1.jpg');
-  /* background-position: center; */
-  background-size: cover;
-  background-repeat: no-repeat;
+  
   flex-shrink: 0;
   z-index: -1;
-}
-
-.App {
-  margin-bottom: -3rem;
 }
 
 .contact {
@@ -41,7 +43,7 @@ body {
 .contact p {
   flex-shrink: 0;
   color: #FFF;
-  font-family: Inter;
+  font-family:'Courier New', Courier, monospace;
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 500;
@@ -340,9 +342,10 @@ select#projectType:focus {
 .privacy {
   width: 11.4375rem;
   height: 2.625rem;
-  margin-top: 3rem;
+  position: relative; 
+  bottom: -7rem;
   color: rgba(255, 255, 255, 0.80);
-  font-family: Inter;
+  font-family:'Courier New', Courier, monospace;
   font-size: 1.1rem;
   font-weight: 500;
  
@@ -361,14 +364,14 @@ select#projectType:focus {
   transform: rotate(-90deg);
   flex-shrink: 0;
   color: rgba(255, 255, 255, 0.80);
-  font-family: Inter;
+  font-family:'Courier New', Courier, monospace;
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-top: -18%;
-  position: absolute;
-  right: -6%;
+  position: relative; 
+  bottom: 7rem;
+  right: -70rem;
 }
 
 @keyframes rotate {
@@ -486,6 +489,9 @@ select#projectType:focus {
   body {
     padding-left: 2rem;
     padding-right: 2rem;
+    margin: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .contact p {
@@ -535,6 +541,9 @@ select#projectType:focus {
     padding-left: 2rem;
     padding-right: 2rem;
     width: 100%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
   }
 
  .rc-anchor.appear {

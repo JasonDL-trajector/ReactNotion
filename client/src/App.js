@@ -15,8 +15,8 @@ function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const successfulSubmit = () => {
-    toast.success("Form submitted successfully.", {
-      onClose: () => {
+    toast.success("Form submitted successfully."); 
+    {
         setFirstName("");
         setLastName("");
         setEmail("");
@@ -25,9 +25,8 @@ function App() {
         setIsCaptchaValid(false);
         const submitButton = document.getElementById("submit-button");
         submitButton.style.opacity = "1";
-        submitButton.style.textDecoration = "none";
-      },
-    });
+        submitButton.style.textDecoration = "none"; 
+    };
   }
 
   const handleCaptchaChange = (value) => {
@@ -50,7 +49,9 @@ function App() {
   
     return (
       firstName.trim() && 
+      /^[A-Za-z]+$/.test(firstName) &&
       lastName.trim() &&
+      /^[A-Za-z]+$/.test(lastName) &&
       email.trim() && 
       projectType.trim() && 
       comment.trim() &&
@@ -58,11 +59,39 @@ function App() {
     );
   };
 
+  const MAX_COMMENT_LENGTH = 250;
+
+  const handleCommentChange = (e) => {
+    const newComment = e.target.value;
+    if (newComment.length <= MAX_COMMENT_LENGTH) {
+      setComment(newComment);
+      const submitButton = document.getElementById("submit-button");
+      submitButton.disabled = false;
+      submitButton.style.opacity = "1";
+      submitButton.style.textDecoration = "none";
+      submitButton.innerText = "Submit"
+      submitButton.style.fontSize = "1.2rem"
+    } else {
+      toast.error(`Comments should not exceed ${MAX_COMMENT_LENGTH} characters.`);
+      const submitButton = document.getElementById("submit-button");
+      submitButton.disabled = true;
+      submitButton.style.opacity = "0.7";
+      submitButton.style.textDecoration = "line-through";
+      submitButton.innerText = "Disabled"
+    }
+  };
+  
+
   async function submitFormToNotion() {
 
     if (!firstName.trim() || !lastName.trim() || !email.trim() || 
         !projectType.trim() || !comment.trim()) {
       toast.error("All fields are required");
+      return;
+    }
+
+    if (!/^[A-Za-z]+$/.test(firstName) || !/^[A-Za-z]+$/.test(lastName)) {
+      toast.error("First Name and Last Name should contain only alphabetic characters.");
       return;
     }
 
@@ -146,7 +175,7 @@ function App() {
                       id='email'
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder='johndoe@gmail.com'
+                      placeholder='john.doe@gmail.com'
                       required
                     />
               </div>
@@ -182,7 +211,7 @@ function App() {
                     <textarea
                       id='comment'
                       value={comment}
-                      onChange={(e) => setComment(e.target.value)}
+                      onChange={handleCommentChange}
                       rows={1}
                       cols={25}
                       placeholder='Type your message here'

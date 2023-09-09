@@ -1,3 +1,5 @@
+![FormEase]('./client/src/assets/banner.png')
+
 # ReactJS Form with Notion API
 
 **Project Overview:**  
