@@ -17,18 +17,18 @@ This project is a ReactJS-based web application that integrates with the Notion 
 
 ### Client Folder
 
-- **react:** 18.2.0
-- **react-google-recaptcha:** 3.1.0
-- **react-player:** 2.12.0
-- **react-toastify:** 8.2.0
+- **react**
+- **react-google-recaptcha**
+- **react-player**
+- **react-toastify**
 
 ### Server Folder
 
-- **@notionhq/client:** 2.2.12
-- **cors:** 2.8.5
-- **dotenv:** 16.3.1
-- **express:** 4.18.2
-- **nodemon:** 3.0.1
+- **@notionhq/client**
+- **cors**
+- **dotenv**
+- **express**
+- **nodemon**
 
 ## Getting Started
 
