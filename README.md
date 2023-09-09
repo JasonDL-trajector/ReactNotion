@@ -1,6 +1,6 @@
 ![FormEase](./client/src/assets/banner.png)
 
-# ReactJS Form with Notion API
+# FormEase: A ReactJS Form with Notion API
 
 **Project Overview:**  
 This project is a ReactJS-based web application that integrates with the Notion API to create and manage forms. The application allows users to design custom forms and store submitted data in a Notion database.
