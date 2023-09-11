@@ -118,7 +118,7 @@ app.post('/submitFormToNotion', jsonParser, async (req, res) => {
         
         
         console.log("SUCCESS");
-        res.status(200).json({ success: true, message: 'Form submitted successfully' });
+        res.status(200).json({ success: true, message: 'Form submitted successfully.' });
        
 
     } catch (error) {

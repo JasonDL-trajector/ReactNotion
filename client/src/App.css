@@ -496,6 +496,10 @@ select#projectType:focus {
     height: 100%;
   }
 
+  /* .rc-anchor.appear {
+    transform: scale(.60);
+  } */
+
   .contact p {
     font-size: .9rem;
   }
@@ -505,7 +509,7 @@ select#projectType:focus {
   }
 
   .privacy {
-    margin-top: 6rem;
+    margin-top: 5rem;
     margin-left: 1rem;
     font-size: .9rem;
   }
@@ -539,12 +543,15 @@ select#projectType:focus {
 
 
 @media screen and (max-width: 768px) {
+  html {
+    height: 100%;
+  }
+
   body {
     padding-left: 2rem;
     padding-right: 2rem;
     width: 100%;
     margin: 0;
-    width: 100%;
     height: 100%;
   }
 
@@ -562,7 +569,11 @@ select#projectType:focus {
   }
 
   .contact p {
-    font-size: .6rem;
+    font-size: .7rem;
+  }
+
+  .privacy {
+    margin-top: 4rem;
   }
 
   .submit-btn {
@@ -595,7 +606,7 @@ select#projectType:focus {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 112%;
+    height: 120%;
   }
   body {
     overflow: auto;
@@ -613,7 +624,7 @@ select#projectType:focus {
   }
 
   .contact p {
-    font-size: .65rem;
+    font-size: .55rem;
   }
 
   .privacy {
@@ -639,7 +650,7 @@ select#projectType:focus {
   }
 
   .form {
-    height: 30rem;
+    height: 31rem;
     padding: 2rem; 
   }
 
@@ -676,5 +687,36 @@ select#projectType:focus {
   .submit-btn {
     bottom: 50%; 
     left: 25%; 
+  }
+
+  .rc-anchor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative !important;
+    width: 38.5% !important;
+    top: 30% !important;
+    left: 35% !important;
+    background: #EEE9E4;
+    padding: 1rem;
+    margin-bottom: -13.5%;
+    transform: scale(.60);
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    border: 1px solid black;
+    border-radius: 30px;
+  }
+  
+  .rc-anchor.appear {
+    animation-name: slideIn;
+    z-index: 10;
+    border: none;
+    border-radius: 0px;
+    background-color: rgba(228, 222, 215, 1.0);
+  }
+  
+  .rc-anchor.hidden {
+    animation-name: slideOut;
+    z-index: -1;
   }
 }
