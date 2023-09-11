@@ -24,7 +24,7 @@ This project is a ReactJS-based web application that integrates with the Notion 
 
 ### Server Folder
 
-- **@notionhq/client**
+- **notionhq/client**
 - **cors**
 - **dotenv**
 - **express**
