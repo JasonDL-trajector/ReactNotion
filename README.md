@@ -68,6 +68,7 @@ npm install
 
 - Create a .env file in the server folder and add your Notion API integration token.
 - Configure other environment variables as needed.
+  **The environment variables are:** - PORT - HOST - NOTION_SECRET (secret API key from Notion) - DATABASE_ID (this can be retrieved from the URL)
 
 **4. Start the server:**
 
