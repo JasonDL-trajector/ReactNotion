@@ -128,7 +128,6 @@ function App() {
       }
 
     } catch (error) {
-      
       console.error('Error:', error);
       toast.error("An error occurred while submitting the form.");
     }
@@ -146,9 +145,7 @@ function App() {
         </div>
 
         <div className='title'> 
-         
           <h1>FormEase</h1>
-          
         </div>
 
         <div className="star">
@@ -228,6 +225,7 @@ function App() {
               )}
 
             </div>
+            
            <div className='submit-btn'>
               <button
                 id="submit-button"

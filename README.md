@@ -74,7 +74,7 @@ npm install
 - PORT
 - HOST
 - NOTION_SECRET (secret API key from Notion)
-- DATABASE_ID (this can be retrieved from the URL)
+- DATABASE_ID (this can be retrieved from the URL of the Database page)
 
 **4. Start the server:**
 
